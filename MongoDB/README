@@ -5,4 +5,13 @@ My related post
 https://medium.com/@pablo_ezequiel/creating-a-docker-image-with-mongodb-4c8aa3f828f2#.oq0iu5h87
 Let´s Start (Again)
 
+Cmpile & Run
+
+sudo docker build -t my_new_mongodb .
+
+sudo docker run -p 27017:27017 -i -t my_new_mongodb
+
+
+
+
 This work ok
