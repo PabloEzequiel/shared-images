@@ -2,6 +2,7 @@ FROM node:6-alpine
 
 ARG NG_CLI_VERSION=latest
 
+
 LABEL author="Pablo Ezequiel <@pab_ezequiel>
 
 RUN apk update \
