@@ -5,11 +5,15 @@ My related post
 https://medium.com/@pablo_ezequiel/creating-a-docker-image-with-mongodb-4c8aa3f828f2#.oq0iu5h87
 Let´s Start (Again)
 
+
+Very good post whit step by step comands on MongoDB over Ubuntu 16.04
+http://www.tutorialspoint.com/articles/how-to-install-mongodb-on-ubuntu-16-04
+
 Cmpile & Run
 
-sudo docker build -t my_new_mongodb .
+sudo docker build -t my_mongodb .
 
-sudo docker run -p 27017:27017 -i -t my_new_mongodb
+sudo docker run -p 27017:27017 -i -t my_mongodb
 
 
 

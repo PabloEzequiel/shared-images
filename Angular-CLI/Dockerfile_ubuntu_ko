@@ -1,0 +1,17 @@
+FROM ubuntu:16.10
+
+# ARG NG_CLI_VERSION=latest
+ARG NG_CLI_VERSION=v1.0.0-beta.32
+
+LABEL author="Pablo Ezequiel <@pab_ezequiel>
+
+RUN apt-get update \
+    && apt-get install -y curl build-essential python \
+    && curl -sL https://deb.nodesource.com/setup_6.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install -g typings angular-cli@$NG_CLI_VERSION \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && npm cache clear
+
+
