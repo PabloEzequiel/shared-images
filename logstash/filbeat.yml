@@ -1,0 +1,6 @@
+filebeat.prospectors:
+- type: log
+  paths:
+    - /Users/pabloinchausti/Desktop/DevOps/code/github/PabloEzequiel/dockerImages/logstash/files/logstash-tutorial.log
+output.logstash:
+  hosts: ["localhost:5044"]
