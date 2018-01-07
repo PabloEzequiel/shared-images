@@ -34,5 +34,14 @@ curl http://www.quandl.com/api/v1/datasets/BCHARTS/MTGOXUSD.csv -o MTGOXUSD.csv
 
 /usr/local/Cellar/logstash/6.1.1/bin/logstash -f /Users/pabloinchausti/Desktop/DevOps/code/github/PabloEzequiel/dockerImages/logstash/logstash-bitcoin-csv.conf
 
+_________
 
-/tmp/logstash
+/usr/local/Cellar/logstash/6.1.1/bin/logstash -f /Users/pabloinchausti/Desktop/DevOps/code/github/PabloEzequiel/dockerImages/logstash/logstash-crbuoy-2015.conf
+
+mongoimport -h ds163156.mlab.com:63156 -d uela -c crbuoy-csv -u $MONGODB_MLAB_USER -p $MONGODB_MLAB_PASS --type csv --headerline --file /Users/pabloinchausti/Desktop/DevOps/code/github/PabloEzequiel/dockerImages/logstash/files/crbuoy2015-out.csv
+
+----
+Mongodb:
+
+
+mongo ds163156.mlab.com:63156/uela -u <USR> -p <PWD>
