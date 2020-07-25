@@ -39,6 +39,9 @@ def lambda_handler(event, context):
     print("EVENT-----------")
     print(event)
     
+    print("CONTEXT------------")
+    print(context)
+    
     # p = event.param
     # print(p)
     
@@ -46,7 +49,7 @@ def lambda_handler(event, context):
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "message": "hello world ... " + " actual ..." + ,
+            "message": "hello world ... " + " actual ..."  ,
             # "location": ip.text.replace("\n", "")
         }),
     }
