@@ -15,12 +15,17 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+
+/**
+ * Saple code from:
+ * https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObjectJavaSDK.html
+ */
 public class GeneratePresignedUrlAndUploadObject {
 
     public static void main(String[] args) throws IOException {
         Regions clientRegion = Regions.US_EAST_1; // Regions.DEFAULT_REGION;
         String bucketName = "fruta-web";
-        String objectKey = "miobjeto";
+        String objectKey = "miobjeto2";
 
         try {
             AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
@@ -40,6 +45,9 @@ public class GeneratePresignedUrlAndUploadObject {
                     .withMethod(HttpMethod.PUT)
                     .withExpiration(expiration);
             URL url = s3Client.generatePresignedUrl(generatePresignedUrlRequest);
+
+
+            System.out.println("PresignedUrlRequest: " + url); 
 
             // Create the connection and use it to upload the new object using the pre-signed URL.
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
