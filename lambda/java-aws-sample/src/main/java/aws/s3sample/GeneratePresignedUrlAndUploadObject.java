@@ -18,9 +18,9 @@ import java.net.URL;
 public class GeneratePresignedUrlAndUploadObject {
 
     public static void main(String[] args) throws IOException {
-        Regions clientRegion = Regions.DEFAULT_REGION;
+        Regions clientRegion = Regions.US_EAST_1; // Regions.DEFAULT_REGION;
         String bucketName = "fruta-web";
-        String objectKey = "*** Object key ***";
+        String objectKey = "miobjeto";
 
         try {
             AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
