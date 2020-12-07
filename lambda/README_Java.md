@@ -27,3 +27,10 @@ Sigo a:
 https://mkyong.com/maven/how-to-create-a-java-project-with-maven/
 
 Para armar el proyecto Java y los JARS
+
+
+b) Charles Certificado:
+
+On Linux, $JAVA_HOME will probably be set already. 
+On macOS, if it isn't set, try running /usr/libexec/java_home to get the location of your JVM.
+
